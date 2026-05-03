@@ -717,7 +717,7 @@ body > *:not(.queen-fixed-bg) {
 
 /* =========================================================
    ZENNA REPORT FINAL RESPONSIVE BACKGROUND + FIXED HEADER
-   Single source of truth for .queen-fixed-bg positioning.
+   One tuned background system for desktop, tablet, and mobile.
 ========================================================= */
 html,
 body {
@@ -785,8 +785,7 @@ header {
   }
 }
 
-@media (min-width: 641px) and (max-width: 1180px) and (pointer: coarse),
-       (min-width: 641px) and (max-width: 920px) and (orientation: landscape) {
+@media (min-width: 641px) and (max-width: 1366px) {
   .queen-fixed-bg {
     background-position: 88% 72px !important;
     background-size: cover !important;
@@ -802,16 +801,16 @@ header {
       linear-gradient(
         to right,
         rgba(249,247,244,0.96) 0%,
-        rgba(249,247,244,0.80) 30%,
+        rgba(249,247,244,0.78) 30%,
         rgba(249,247,244,0.08) 56%,
-        rgba(249,247,244,0.00) 76%,
+        rgba(249,247,244,0.00) 74%,
         rgba(249,247,244,0.00) 100%
       ),
       linear-gradient(
         to bottom,
-        rgba(249,247,244,0.18) 0%,
-        rgba(249,247,244,0.08) 42%,
-        rgba(249,247,244,0.22) 100%
+        rgba(249,247,244,0.12) 0%,
+        rgba(249,247,244,0.04) 44%,
+        rgba(249,247,244,0.12) 100%
       );
   }
 }
@@ -819,14 +818,7 @@ header {
 @media (min-width: 641px) and (max-width: 920px) and (orientation: landscape),
        (min-width: 641px) and (max-width: 1024px) and (pointer: coarse) {
   .queen-fixed-bg {
-    background-position: 90% 72px !important;
-    background-size: cover !important;
-  }
-}
-
-@media (min-width: 921px) and (max-width: 1366px) and (pointer: coarse) {
-  .queen-fixed-bg {
-    background-position: 88% 76px !important;
+    background-position: 86% 72px !important;
     background-size: cover !important;
   }
 }
@@ -849,10 +841,8 @@ header {
     height: 82svh !important;
     min-height: 560px !important;
     opacity: 1 !important;
-    background-size: auto 112vh !important;
-    background-size: auto 112svh !important;
-    background-size: auto min(92svh, 760px) !important;
-    background-position: 90% top !important;
+    background-size: auto min(102svh, 760px) !important;
+    background-position: 82% top !important;
   }
 
   .nav-inner {
@@ -914,17 +904,17 @@ header {
     background:
       linear-gradient(
         to right,
-        rgba(249,247,244,0.96) 0%,
+        rgba(249,247,244,0.95) 0%,
         rgba(249,247,244,0.78) 34%,
         rgba(249,247,244,0.08) 58%,
-        rgba(249,247,244,0.00) 76%,
+        rgba(249,247,244,0.00) 74%,
         rgba(249,247,244,0.00) 100%
       ),
       linear-gradient(
         to bottom,
-        rgba(249,247,244,0.16) 0%,
-        rgba(249,247,244,0.06) 40%,
-        rgba(249,247,244,0.20) 100%
+        rgba(249,247,244,0.10) 0%,
+        rgba(249,247,244,0.03) 40%,
+        rgba(249,247,244,0.12) 100%
       );
   }
 
@@ -1019,10 +1009,8 @@ header {
     height: 84svh !important;
     min-height: 580px !important;
     opacity: 1 !important;
-    background-size: auto 112vh !important;
-    background-size: auto 112svh !important;
-    background-size: auto min(96svh, 740px) !important;
-    background-position: 92% top !important;
+    background-size: auto min(108svh, 740px) !important;
+    background-position: 82% top !important;
   }
 
   .nav-inner {
