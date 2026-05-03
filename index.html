@@ -1067,7 +1067,7 @@ body {
   }
 }
 
-@media (min-width: 641px) and (max-width: 1180px) {
+@media (min-width: 641px) and (max-width: 1180px) and (pointer: coarse) {
   .queen-fixed-bg {
     background-position: 94% 76px !important;
     background-size: auto 58vh !important;
@@ -1083,7 +1083,7 @@ body {
   }
 }
 
-@media (min-width: 641px) and (max-width: 1600px) {
+@media (min-width: 641px) and (max-width: 1600px) and (pointer: coarse) {
   .queen-fixed-bg {
     background-position: 108% 92px !important;
     background-size: auto 46vh !important;
@@ -1115,6 +1115,7 @@ body {
       if (!bg) return;
 
       var w = window.innerWidth || document.documentElement.clientWidth;
+      var isTouchTablet = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
 
       if (w <= 640) {
         bg.style.backgroundSize = 'cover';
@@ -1122,11 +1123,11 @@ body {
         return;
       }
 
-          if (w <= 1800) {
-            bg.style.backgroundSize = 'auto 40vh';
-            bg.style.backgroundPosition = '100% 122px';
-            return;
-          }
+      if (isTouchTablet && w <= 1800) {
+        bg.style.backgroundSize = 'auto 40vh';
+        bg.style.backgroundPosition = '100% 122px';
+        return;
+      }
 
       bg.style.backgroundSize = 'cover';
       bg.style.backgroundPosition = 'center 76px';
